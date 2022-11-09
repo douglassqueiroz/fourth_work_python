@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!-- cSpell:disable -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TETI</title>
+    <link rel="shortcut icon" href="../static/images/ifms_f_logo.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="../static/css/douglas_names.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+</head>
+
+<body>
+    <h3>Formulário de nomes</h3>
+
+    <main>
+        <form action="/add-name" method="POST">
+            <div class="mb-3">
+                <label for="Name" class="form-label">Adicione um nome por vez:</label>
+                <input type="text" class="form-control" id="Name" name="Name" autofocus placeholder="Insire o nome aqui" required>
+            </div>
+            <div class="btn-area">
+                <a href="/list" class="btn btn-primary">Refazer a lista</a>
+                <button type="submit" class="btn btn-primary">Adcionar</button>
+            </div>
+        </form>
+        <ol type="1">
+            {% for name in name_list %}
+            <li>{{ name }}</li>
+            {% endfor %}
+        </ol>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+</body>
+
+</html>
